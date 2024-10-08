@@ -7,7 +7,7 @@
   --transtion-duration: 0.3s;
 }
 /* End Variables */
-/* Start Global Rules*/
+/* Start Global Rules */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -87,6 +87,22 @@ ul {
   max-width: 100%; /*حتى في الموبايل ما يطلع خارج المساحة الخاصة فيه*/
   margin: 0 auto 100px;
   color: var(--paragraph-color);
+}
+.main-button {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--main-color);
+  padding: 10px 20px;
+  text-transform: uppercase;
+  display: block;
+  width: fit-content;
+  text-decoration: none;
+  border: 1px solid var(--main-color);
+  transition: var(--transtion-duration);
+}
+.main-button:hover {
+  color: white;
+  background-color: var(--main-color) !important;
 }
 /* End Components */
 /* Start Header */
@@ -441,23 +457,7 @@ header nav .form i:hover {
   color: var(--main-color);
 }
 .protfolio .more {
-  font-size: 18px;
-  font-weight: bold;
-  border: none;
-  border: 1px solid var(--main-color);
-  color: var(--main-color);
-  padding: 10px 20px;
   margin: 40px auto;
-  text-transform: uppercase;
-  display: inline-block;
-  width: fit-content;
-  text-decoration: none;
-  transition: var(--transtion-duration);
-  transition-timing-function: linear;
-}
-.protfolio .more:hover {
-  color: white;
-  background-color: var(--main-color);
 }
 /* End Protfolio */
 /* Start Video */
@@ -465,20 +465,18 @@ header nav .form i:hover {
   position: relative;
   margin-top: -70px;
 }
-.video::before {
-  /* overlay هنا نفس فكرة المثيود الي سوينها مسبقاً والتي كان اسمها */
+.video::before { /* overlay هنا نفس فكرة المثيود الي سوينها مسبقاً والتي كان اسمها */
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgb(0 0 0 / 30%);
+  background-color: rgb(0 0 0 / 25%);
 }
 .video video {
   width: 100%;
-  /* aspect-ratio: ; */
-  /* هي من الخواص المفيدة حيث تساعدك على ضبط مقاسات الصورة او الفيديو مثل وضع 16/9 او 4/3 */
+  /* aspect-ratio: ; */ /* هي من الخواص المفيدة حيث تساعدك على ضبط مقاسات الصورة او الفيديو مثل وضع 16/9 او 4/3 */
 }
 .video .text {
   position: absolute;
@@ -496,7 +494,7 @@ header nav .form i:hover {
   }
 }
 .video .text h2 {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: normal;
   text-transform: uppercase;
   margin-bottom: 25px;
@@ -777,8 +775,14 @@ header nav .form i:hover {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 25px;
 }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .pricing .plans {
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 40px;
+  }
+}
 .pricing .plans .plan {
-  background-color: #fcfcfc;
+  background-color: #f3f0f0;
   text-align: center;
 }
 .pricing .plans .plan .head {
@@ -791,8 +795,7 @@ header nav .form i:hover {
   margin-bottom: 20px;
   text-transform: uppercase;
 }
-.pricing .plans .plan .head span {
-  /* يفضل تنطي كلاس لل السبان لان هو كثير الاستخدام */
+.pricing .plans .plan .head span { /* يفضل تنطي كلاس لل السبان لان هو كثير الاستخدام */
   font-size: 50px;
   font-weight: bold;
 }
@@ -850,21 +853,7 @@ header nav .form i:hover {
   font-size: 18px;
 }
 .pricing .contact-link {
-  display: block;
-  text-decoration: none;
-  color: var(--main-color);
-  font-weight: 700;
-  font-size: 16px;
-  background-color: white;
-  border: 1px solid var(--main-color);
-  width: fit-content;
-  margin: 20px auto;
-  padding: 15px 25px;
-  transition: var(--transtion-duration);
-}
-.pricing .contact-link:hover {
-  background-color: var(--main-color);
-  color: white;
+  margin: 40px auto 0;
 }
 /* End Pricing */
 /* Start Subscribe */
@@ -982,21 +971,10 @@ header nav .form i:hover {
   height: 200px;
 }
 .contact .content form input[type="submit"] {
-  background-color: white;
-  color: var(--main-color);
-  border: 1px solid var(--main-color);
-  font-size: 16px;
-  font-weight: 600;
-  padding: 20px;
   display: flex;
   margin-left: auto;
-  text-transform: uppercase;
   cursor: pointer;
-  transition: var(--transtion-duration);
-}
-.contact .content form input[type="submit"]:hover {
-  color: white;
-  background-color: var(--main-color);
+  background-color: white;
 }
 .contact .content .info {
   flex-basis: 25%;
@@ -1009,7 +987,7 @@ header nav .form i:hover {
 }
 .contact .content .info h4 {
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-weight: 500;
   font-size: 18px;
 }
@@ -1023,7 +1001,7 @@ header nav .form i:hover {
 }
 @media (max-width: 767px) {
   .contact .content .info h4:nth-of-type(2) {
-    margin-top: 30px;
+    margin-top: 50px;
   }
 }
 .contact .content .info address {
