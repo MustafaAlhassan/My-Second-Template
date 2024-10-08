@@ -5,6 +5,8 @@
   --paragraph-color: #555;
   --section-padding: 100px;
   --transtion-duration: 0.3s;
+  --main-border: 1px solid var(--main-color);
+  --Secondary-border: 1px solid white;
 }
 /* End Variables */
 /* Start Global Rules */
@@ -97,7 +99,7 @@ ul {
   display: block;
   width: fit-content;
   text-decoration: none;
-  border: 1px solid var(--main-color);
+  border: var(--main-border);
   transition: var(--transtion-duration);
 }
 .main-button:hover {
@@ -177,14 +179,14 @@ header nav ul li a {
 }
 header nav ul li a:hover {
   color: var(--main-color);
-  border-bottom: 1px solid var(--main-color);
+  border-bottom: var(--main-border);
 }
 header nav .form {
   width: 40px;
   height: 30px;
   position: relative;
   margin-left: 30px;
-  border-left: 1px solid white;
+  border-left: var(--Secondary-border);
 }
 header nav .form i {
   color: white;
@@ -284,7 +286,7 @@ header nav .form i:hover {
 .landing .bullets li {
   width: 20px;
   height: 20px;
-  border: 1px solid white;
+  border: var(--Secondary-border);
   border-radius: 50%;
   margin-right: 10px;
 }
@@ -654,7 +656,6 @@ header nav .form i:hover {
 }
 .our-skills .testimonials .text {
   line-height: 1.8;
-  border-bottom: 1px solid #ccc;
 }
 .our-skills .testimonials .text p {
   color: var(--paragraph-color);
@@ -787,8 +788,8 @@ header nav .form i:hover {
 }
 .pricing .plans .plan .head {
   padding: 40px 20px;
-  border-top: 1px solid var(--main-color);
-  border-bottom: 1px solid var(--main-color);
+  border-top: var(--main-border);
+  border-bottom: var(--main-border);
 }
 .pricing .plans .plan .head h3 {
   font-weight: normal;
@@ -815,7 +816,7 @@ header nav .form i:hover {
   font-weight: normal;
 }
 .pricing .plans .plan ul {
-  border-bottom: 1px solid var(--main-color);
+  border-bottom: var(--main-border);
 }
 .pricing .plans .plan ul li {
   padding: 20px;
@@ -839,7 +840,7 @@ header nav .form i:hover {
   padding: 10px 20px;
   margin: 20px 0;
   display: inline-block;
-  border: 1px solid var(--main-color);
+  border: var(--main-border);
   transition: var(--transtion-duration);
 }
 .pricing .plans .plan .foot a:hover {
@@ -897,7 +898,7 @@ header nav .form i:hover {
   left: 25px;
 }
 .subscribe form input[type="email"] {
-  border: 1px solid white;
+  border: var(--Secondary-border);
   border-right: none;
   background: none;
   padding: 20px 20px 20px 60px;
@@ -912,7 +913,7 @@ header nav .form i:hover {
   font-size: 16px;
   font-weight: 600;
   padding: 10px 20px;
-  border: 1px solid white;
+  border: var(--Secondary-border);
   border-left: none;
   text-transform: uppercase;
   letter-spacing: 1px;
