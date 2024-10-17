@@ -1,5 +1,5 @@
 # My-Second-Template
-This is my second template (project) in web (I use only HTML &amp; CSS)
+This is my second template (project) in web.
 
 You can see the website by click on this link:
 https://mustafaalhassan.github.io/My-Second-Template/
